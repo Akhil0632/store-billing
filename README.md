@@ -119,7 +119,7 @@ php artisan queue:work
 ## API Reference
 - All endpoints accept and return application/json. Base URL: http://localhost:8000/api.
 
-# POST/orders
+POST/orders
 - Create a new order.
   Request body:
 
@@ -165,7 +165,7 @@ php artisan queue:work
   422	    Insufficient stock — {"success": false, "message": "Insufficient stock for 'Bread'. Available: 2, Requested: 5."}
   422	    Amount given < grand total
 
-# GET /orders/history
+GET /orders/history
 - Paginated order history for a customer, resolved by email.
   GET /api/orders/history?email=thomas@example.com&per_page=10
 
@@ -185,7 +185,7 @@ php artisan queue:work
  404	No customer found with that email
  422	Malformed email
 
-# GET /orders/history
+GET /orders/history
 - Returns products below the configured threshold (default 10).
   GET /api/products/low-stock?threshold=5&sort=name_asc
 
