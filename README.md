@@ -63,22 +63,22 @@ A small Laravel application that lets a retail counter record customer orders ag
 
 ## Installation 
 
-# 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/your-org/store-billing.git
 cd store-billing
 
-# 2. Install PHP dependencies
+### 2. Install PHP dependencies
 composer install
 
-# 3. Copy the environment file
+### 3. Copy the environment file
 cp .env.example .env
 
-# 4. Generate the application key
+### 4. Generate the application key
 php artisan key:generate
 
-# 5. Configuration
+### 5. Configuration
 Create .env and copy .env.example - cp .env.example .env
-# Database
+## Database
 - DB_CONNECTION=mysql
 - DB_HOST=127.0.0.1
 - DB_PORT=3306
@@ -86,18 +86,18 @@ Create .env and copy .env.example - cp .env.example .env
 - DB_USERNAME=root
 - DB_PASSWORD=
   
-# Queue
+## Queue
 - QUEUE_CONNECTION=database
 
-# Mail
+## Mail
 - MAIL_MAILER=log
 - MAIL_FROM_ADDRESS="billing@store.com"
 - MAIL_FROM_NAME="${APP_NAME}"
 
-# Application-specific settings
+## Application-specific settings
 - LOW_STOCK_THRESHOLD=10
 
-# 6. Database Creation and Run the Migration
+### 6. Database Creation and Run the Migration
 - Create the database store_billing in XAMPP
 php artisan migrate --seed
 
